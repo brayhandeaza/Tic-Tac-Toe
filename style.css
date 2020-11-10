@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #3a3838;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-board {
+    width: 450px;
+    height: 450px;
+    margin: 10px auto;
+    border-radius: 10px;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    display: grid;
+    animation-name: fadeIn;
+    animation-duration: 2s; 
+}
+
+.box {
+    display: flex;
+    font-weight: bold;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #757575;
+    cursor: pointer;
+    border-collapse: collapse;
+    font-family: 'Gloria Hallelujah';
+    color: #ff6347;
+}
+ .player {
+     width: 90%;
+     height: 100px;
+ }
+ 
+.red {
+    color: #37abe0;
+}
+
+.yellow {
+    color: #c272b0;
+}
+
+h1, #resetBtn {
+    text-align: center;
+    font-size: 80px;
+}
+
+._hide {
+    display: none;
+}
+
+#resetBtn {
+    height: 50px;
+    width: 200px;
+    margin: 30px auto;
+    display: block;
+    border-radius: 100px;
+    background-color:tomato;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Gloria Hallelujah';
+    font-size: 20px;
+}
+
+#resetBtn:hover {
+    background-color: rgba(111, 112, 114, 0.7);
+}
+
+.bottomIn{
+    position: relative;
+    animation-name: bottomIn;
+    animation-duration: 1s;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .game-board {
+        width: 300px;
+        height: 300px;
+        margin: 10px auto;
+        border-radius: 10px;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        display: grid;
+        animation-name: fadeIn;
+        animation-duration: 2s;
+        
+    }
+  }
